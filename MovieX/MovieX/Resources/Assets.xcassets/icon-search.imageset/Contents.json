@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-search-48.png",
+      "filename" : "icons8-search-30.png",
       "scale" : "1x"
     },
     {
@@ -19,3 +19,4 @@
     "author" : "xcode"
   }
 }
+
