@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uwN-i1-Dz3">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Data Source-->
+        <scene sceneID="Wvz-en-Ds3">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="uwN-i1-Dz3" customClass="HomeViewController" customModule="MovieX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nqp-2W-KxV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yIf-GF-VIy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZc-37-ikX" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="76" width="320" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uwN-i1-Dz3" id="RGW-4a-QaM"/>
+                                    <outlet property="delegate" destination="uwN-i1-Dz3" id="gXk-Lg-yBz"/>
+                                </connections>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AVD-70-vLC">
+                                <rect key="frame" x="0.0" y="36" width="320" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="OqX-N6-J0Q"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GUz-IS-DyY">
+                                    <size key="itemSize" width="122" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YXD-mB-pit">
+                                        <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AVD-70-vLC" firstAttribute="top" secondItem="OhB-99-k3s" secondAttribute="top" constant="16" id="1Y1-Mm-vxe"/>
+                            <constraint firstItem="EZc-37-ikX" firstAttribute="trailing" secondItem="OhB-99-k3s" secondAttribute="trailing" id="Axz-tn-9Re"/>
+                            <constraint firstItem="yIf-GF-VIy" firstAttribute="top" secondItem="Nqp-2W-KxV" secondAttribute="top" id="ano-sy-e2P"/>
+                            <constraint firstItem="AVD-70-vLC" firstAttribute="leading" secondItem="OhB-99-k3s" secondAttribute="leading" id="ax9-UN-K6v"/>
+                            <constraint firstItem="OhB-99-k3s" firstAttribute="trailing" secondItem="yIf-GF-VIy" secondAttribute="trailing" id="bA2-T0-Yxg"/>
+                            <constraint firstItem="OhB-99-k3s" firstAttribute="bottom" secondItem="yIf-GF-VIy" secondAttribute="bottom" id="ce3-cl-Upn"/>
+                            <constraint firstItem="yIf-GF-VIy" firstAttribute="leading" secondItem="OhB-99-k3s" secondAttribute="leading" id="jDW-Wg-eS1"/>
+                            <constraint firstItem="EZc-37-ikX" firstAttribute="top" secondItem="AVD-70-vLC" secondAttribute="bottom" id="o7H-FW-717"/>
+                            <constraint firstItem="OhB-99-k3s" firstAttribute="bottom" secondItem="EZc-37-ikX" secondAttribute="bottom" constant="16" id="o89-1L-vbk"/>
+                            <constraint firstItem="EZc-37-ikX" firstAttribute="leading" secondItem="OhB-99-k3s" secondAttribute="leading" id="ycD-3I-W44"/>
+                            <constraint firstItem="OhB-99-k3s" firstAttribute="trailing" secondItem="AVD-70-vLC" secondAttribute="trailing" id="yrl-n5-4KN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OhB-99-k3s"/>
+                    </view>
+                    <connections>
+                        <outlet property="carouselView" destination="EZc-37-ikX" id="8co-7b-PfF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G16-sP-weC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2143.125" y="-359.15492957746477"/>
+        </scene>
+    </scenes>
+</document>
