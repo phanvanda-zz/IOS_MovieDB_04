@@ -11,29 +11,31 @@ import Foundation
 struct URLs {
     private static var apiBaseUrl = "https://api.themoviedb.org/3"
     
-    public static let apiGetMovies = apiBaseUrl + "/genre/"
+    public static let apiMovies = apiBaseUrl + "/genre/"
     
-    public static let apiGetGenresUrl = apiBaseUrl + "/genre/movie/list"
+    public static let apiGenresUrl = apiBaseUrl + "/genre/movie/list"
     
-    public static let apiSearchUserUrl = apiBaseUrl + "/search/company"
+    public static let apiSearchUser = apiBaseUrl + "/search/company"
     
-    public static let apiGetMoviesByGenres = apiBaseUrl + "/list/"
+    public static let apiMoviesByGenres = apiBaseUrl + "/list/"
     
-    static let apiMovieTopRatedURL = apiBaseUrl + "/movie/top_rated"
+    public static let apiMovieTopRated = apiBaseUrl + "/movie/top_rated"
     
-    static let apiMoviePopularURL = apiBaseUrl + "/movie/popular"
+    public static let apiMoviePopular = apiBaseUrl + "/movie/popular"
     
-    static let apiMovieUpcomingURL = apiBaseUrl + "/movie/upcoming"
+    public static let apiMovieUpcoming = apiBaseUrl + "/movie/upcoming"
+    
+    public static let apiMovieNowPlaying = apiBaseUrl + "/movie/now_playing"
     
     public static let apiGetId = apiBaseUrl + "/movie/"
     
-    public static let apiGetCredit = apiBaseUrl + "/movie/"
+    public static let apiCredit = apiBaseUrl + "/movie/"
     
-    public static let apiGetMoviesByCredit = apiBaseUrl + "/person/"
+    public static let apiMoviesByCredit = apiBaseUrl + "/person/"
     
     public static let posterImage = "https://image.tmdb.org/t/p/w300_and_h450_bestv2"
     
     public static let backdropImage = "https://image.tmdb.org/t/p/original"
     
-    static let apiMovieSearch = apiBaseUrl + "/search/movie"
+    public static let apiMovieSearch = apiBaseUrl + "/search/movie"
 }
