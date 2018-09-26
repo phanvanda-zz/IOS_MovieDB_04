@@ -14,3 +14,9 @@ struct Storyboards {
     static let genre = UIStoryboard(name: "Genre", bundle: nil)
     static let library = UIStoryboard(name: "Library", bundle: nil)
 }
+
+struct titleNavigation {
+    static let home = "Home"
+    static let genre = "Genre"
+    static let library = "Library"
+}

@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "clapperboard.png",
+      "filename" : "icons8-time-64 (1).png",
       "scale" : "1x"
     },
     {
@@ -19,4 +19,3 @@
     "author" : "xcode"
   }
 }
-
