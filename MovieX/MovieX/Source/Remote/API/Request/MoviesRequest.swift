@@ -22,7 +22,6 @@ enum MoviesType: Int {
             return "Up Coming Movies"
         }
     }
-    
     var url: String {
         switch self {
         case .nowPlaying:
@@ -38,12 +37,12 @@ enum MoviesType: Int {
 }
 
 class MoviesRequest: BaseRequest {
-    required init(listType: MoviesType, page: Int) {
+    required init(id: Int, page: Int) {
         let body: [String: Any] = [
             "api_key": APIKey.key,
             "language": "en-US",
             "page": page
         ]
-        super.init(url: listType.url, requestType: .get, body: body)
+        super.init(url: URLs.apiMoviesByGenres + "\(id)" + "/movies", requestType: .get, body: body)
     }
 }

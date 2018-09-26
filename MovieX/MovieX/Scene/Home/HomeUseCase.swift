@@ -11,12 +11,19 @@ import RxSwift
 import RxCocoa
 
 protocol HomeUseCaseType {
-    func getMovies(listType: MoviesType) -> Observable<[Movie]>
+    func getMoviesByGenre(id: Int, page: Int) -> Observable<[Movie]>
+    func getGenres() -> Observable<[Genre]>
 }
 
 struct HomeUseCase: HomeUseCaseType {
-    func getMovies(listType: MoviesType) -> Observable<[Movie]> {
-        let request = MoviesRequest(listType: listType, page: 1)
+    func getGenres() -> Observable<[Genre]> {
+        let request = GenresRequest()
+        let repository = HomeRepositoryImp(api: APIService.share)
+        return repository.getGenres(input: request)
+    }
+    
+    func getMoviesByGenre(id: Int, page: Int) -> Observable<[Movie]> {
+        let request = MoviesRequest(id: id, page: page)
         let repository = HomeRepositoryImp(api: APIService.share)
         return repository.getMovies(input: request)
     }

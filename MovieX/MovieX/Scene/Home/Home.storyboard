@@ -19,23 +19,23 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yIf-GF-VIy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZc-37-ikX" customClass="iCarousel">
-                                <rect key="frame" x="0.0" y="76" width="320" height="476"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="60" width="320" height="492"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="uwN-i1-Dz3" id="RGW-4a-QaM"/>
                                     <outlet property="delegate" destination="uwN-i1-Dz3" id="gXk-Lg-yBz"/>
                                 </connections>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AVD-70-vLC">
-                                <rect key="frame" x="0.0" y="36" width="320" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AVD-70-vLC">
+                                <rect key="frame" x="0.0" y="20" width="320" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="OqX-N6-J0Q"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GUz-IS-DyY">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GUz-IS-DyY">
                                     <size key="itemSize" width="122" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -43,7 +43,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YXD-mB-pit">
-                                        <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
+                                        <rect key="frame" x="0.0" y="-5" width="122" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="122" height="50"/>
@@ -52,10 +52,31 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="UAP-MC-Gh4">
+                                <rect key="frame" x="0.0" y="38" width="320" height="492"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.83737521701388884" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SNk-PP-JbK">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KRG-nL-Tja">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="AVD-70-vLC" firstAttribute="top" secondItem="OhB-99-k3s" secondAttribute="top" constant="16" id="1Y1-Mm-vxe"/>
+                            <constraint firstItem="AVD-70-vLC" firstAttribute="top" secondItem="OhB-99-k3s" secondAttribute="top" id="1Y1-Mm-vxe"/>
                             <constraint firstItem="EZc-37-ikX" firstAttribute="trailing" secondItem="OhB-99-k3s" secondAttribute="trailing" id="Axz-tn-9Re"/>
                             <constraint firstItem="yIf-GF-VIy" firstAttribute="top" secondItem="Nqp-2W-KxV" secondAttribute="top" id="ano-sy-e2P"/>
                             <constraint firstItem="AVD-70-vLC" firstAttribute="leading" secondItem="OhB-99-k3s" secondAttribute="leading" id="ax9-UN-K6v"/>
@@ -71,6 +92,9 @@
                     </view>
                     <connections>
                         <outlet property="carouselView" destination="EZc-37-ikX" id="8co-7b-PfF"/>
+                        <outlet property="genresCollectionView" destination="AVD-70-vLC" id="9kc-Yk-g5M"/>
+                        <outlet property="imageBackground" destination="yIf-GF-VIy" id="PYG-m1-Fuz"/>
+                        <outlet property="movieCollectionView" destination="UAP-MC-Gh4" id="ZdQ-xV-VXA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G16-sP-weC" userLabel="First Responder" sceneMemberID="firstResponder"/>

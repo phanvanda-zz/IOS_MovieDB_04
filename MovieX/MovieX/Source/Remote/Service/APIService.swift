@@ -27,7 +27,10 @@ struct APIService {
     
     func request<T: Mappable>(input: BaseRequest) -> Observable<T> {
         return Observable.create{ observer in
-            
+            print("\n------------REQUEST INPUT")
+            print("link: %@", input.url)
+            print("body: %@", input.body ?? "No Body")
+            print("------------ END REQUEST INPUT\n")
             self.alamofireManager.request(input.url, method: input.requestType, parameters: input.body, encoding: input.encoding)
                 .validate(statusCode: 200..<500)
                 .responseJSON { response in

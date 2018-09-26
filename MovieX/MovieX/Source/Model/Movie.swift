@@ -16,9 +16,11 @@ class Movie: BaseModel {
     var vote: Double = 0.00
     var overview = ""
     var releaseDate = Date()
-    var popularity: Int = 0
+    var popularity: Double = 0
     var backdropPath = ""
     var character = ""
+    var runtime: Int = 0
+    var voteCount: Double = 0
     
     required init?(map: Map) {
         mapping(map: map)
@@ -34,5 +36,7 @@ class Movie: BaseModel {
         popularity <- map["popularity"]
         character <- map["character"]
         backdropPath <- map["backdrop_path"]
+        runtime <- map["runtime"]
+        voteCount <- map["vote_count"]
     }
 }
